@@ -132,6 +132,3 @@ To deploy the application on Render:
 
 - **Deployment Issues:** Ensure that all environment variables are correctly set in the Render dashboard, and large files like `node_modules` are excluded using `.gitignore`.
 
-## Contributing
-
-Contributions are welcome! Please fork the repository and create a pull request for any improvements or bug fixes.
