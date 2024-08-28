@@ -1,134 +1,124 @@
 # Personal Finance Tracker
 
-Personal Finance Tracker is a web application designed to help users manage their finances by tracking income, expenses, and transactions. The app is built with a React frontend and a Node.js backend, using Firebase Firestore as the database.
+A web application designed to help users manage their personal finances by tracking income and expenses. This application supports user authentication, transaction management, and provides useful features like sorting, filtering, and data visualization to enhance the user experience.
+
+## Table of Contents
+
+- [Demo](#demo)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Backend Setup](#backend-setup)
+- [Assumptions & Limitations](#assumptions--limitations)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Demo
+
+Check out the live demo of the Personal Finance Tracker [here](https://personal-finance-tracker-9cd3e.web.app/).
 
 ## Features
 
-- **User Authentication:** Secure login and signup with Firebase Authentication.
-- **Transaction Management:** Add, edit, and delete transactions for both income and expenses.
-- **Categorization:** Categorize transactions to track spending habits.
-- **Reporting:** View summaries of income, expenses, and transaction counts, including pie charts for visual representation.
-- **Responsive Design:** The app is designed to work seamlessly on both mobile and desktop devices.
+1. **Dashboard Overview**:
+    - **Total Transactions**: Displays the total number of transactions recorded.
+    - **Total Expenses and Income**: Shows the cumulative totals of all expenses and income.
+    - **Net Balance**: Calculates and displays the net balance, which is the difference between total income and total expenses.
+    - **Data Visualization**: Provides graphical representations of income and expenses over time and by category.
 
-## Running the Project
+2. **Transaction Management**:
+    - **Add Transactions**: Users can add transactions by specifying the amount, type (income/expense), date, category, and an optional description.
+    - **Edit & Delete**: Users can edit or delete existing transactions as needed.
+    - **Categorization**: Transactions can be categorized into different types like groceries, rent, salary, etc.
 
-### Prerequisites
+3. **Transaction List**:
+    - **Comprehensive List View**: A detailed list of all transactions is displayed, showing the amount, type, date, category, and description.
+    - **Summary Section**: A summary that shows total income, total expenses, and the current balance.
+    - **Highlighting**: Transactions that exceed a certain amount are highlighted for easy identification.
 
-Ensure you have the following installed on your machine:
+4. **Sorting and Filtering**:
+    - **Sort by Date/Amount/Category**: Users can sort transactions based on various criteria like date, amount, or category.
+    - **Filter by Type**: Users can filter transactions to view only income or expenses.
+    - **Filter by Category**: Users can view transactions from specific categories, making it easier to analyze spending patterns.
 
-- **Node.js** (version 14 or above)
-- **npm** (version 6 or above)
-- **Firebase Account:** With Firestore enabled
-- **Render Account:** For deployment
+5. **User Authentication**:
+    - **Secure Login/Registration**: Users can register and log in using Firebase Authentication.
+    - **User-Specific Data**: Each user's data is securely stored and isolated, ensuring privacy and security.
+    - **Session Management**: Users can log out and manage their sessions securely.
 
-### Setup Steps
+6. **Responsive Design**:
+    - **Mobile and Desktop Friendly**: The app is fully responsive, offering a seamless experience across devices of all sizes.
+    - **Smooth User Experience**: The interface is designed to be intuitive and easy to navigate, ensuring smooth operation.
 
-1. **Clone the Repository:**
+## Technologies Used
 
-   ```bash
-   git clone https://github.com/vvnserrao/Personal_Finance_Tracker.git
-   cd Personal_Finance_Tracker
-   ```
+- **Frontend**: React.js, HTML, CSS, JavaScript
+- **Backend**: Node.js, Express.js (optional)
+- **Database**: Firebase Firestore
+- **Authentication**: Firebase Authentication
+- **State Management**: Redux (optional for complex state management)
+- **Hosting**: Firebase Hosting or Render
 
-2. **Install Dependencies:**
+## Installation
 
-   Run the following command in the root directory to install the required npm packages:
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/vvnserrao/Personal_Finance_Tracker.git
+    ```
+2. **Navigate to the project directory**:
+    ```bash
+    cd Personal_Finance_Tracker
+    ```
+3. **Install the dependencies**:
+    ```bash
+    npm install
+    ```
 
-   ```bash
-   npm install
-   ```
+## Usage
 
-3. **Set Up Firebase Firestore:**
+1. **Start the development server**:
+    ```bash
+    npm start
+    ```
+   The app will run in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-   - Go to the [Firebase Console](https://console.firebase.google.com/).
-   - Create a new project and enable Firestore.
-   - Create a web app within the Firebase project to obtain the Firebase configuration.
+2. **Run the tests**:
+    ```bash
+    npm test
+    ```
+   This launches the test runner in the interactive watch mode.
 
-4. **Create a `.env` File:**
+3. **Build for production**:
+    ```bash
+    npm run build
+    ```
+   This command will bundle the React application for production in the `build` folder.
 
-   In the root directory, create a `.env` file and add the following environment variables:
+## Backend Setup
 
-   ```bash
-   REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
-   REACT_APP_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
-   REACT_APP_FIREBASE_PROJECT_ID=your_firebase_project_id
-   REACT_APP_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
-   REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
-   REACT_APP_FIREBASE_APP_ID=your_firebase_app_id
-   ```
-
-   Replace the placeholders with the actual values from your Firebase project.
-
-5. **Running the Application Locally:**
-
-   - Start the React frontend:
-
-     ```bash
-     npm start
-     ```
-
-     The application will be available at `http://localhost:3000`.
-
-   - Start the Node.js backend:
-
-     ```bash
-     cd server
-     npm install
-     npm start
-     ```
-
-     The backend server will be running on `http://localhost:5000`.
-
-### Deployment
-
-To deploy the application on Render:
-
-1. Commit your changes to the repository.
-
-   ```bash
-   git add .
-   git commit -m "Ready for deployment"
-   git push origin master
-   ```
-
-2. Link your GitHub repository to Render and set up a new web service.
-
-3. Add the environment variables from your `.env` file in the Render Environment section.
-
-4. Deploy the app by selecting the `master` branch.
-
-## Application Features
-
-1. **User Authentication:**
-   - Secure login and signup forms.
-   - Firebase Authentication for managing user sessions.
-
-2. **Transaction Management:**
-   - Add new transactions for income and expenses.
-   - Edit existing transactions to update details.
-   - Delete transactions with confirmation prompts.
-   - Filter and sort transactions by date, type, and category.
-
-3. **Dashboard:**
-   - View total income, expenses, and net balance.
-   - Visualize data with pie charts for income vs. expenses and category distribution.
-
-4. **Responsive Design:**
-   - The application is optimized for both desktop and mobile devices, ensuring a seamless user experience across platforms.
+1. **Navigate to the backend directory**:
+    ```bash
+    cd backend
+    ```
+2. **Install backend dependencies**:
+    ```bash
+    npm install
+    ```
+3. **Run the backend server**:
+    ```bash
+    npm start
+    ```
 
 ## Assumptions & Limitations
 
-### Assumptions
+- **Assumptions**:
+  - The application assumes basic knowledge of personal finance management.
+  - Firebase Authentication is used for managing user sessions.
+  - Users will manually input their financial transactions.
 
-- **User Data:** It is assumed that users will manually input transaction data.
-- **Categories:** Predefined categories are assumed to cover most common use cases, though users can add custom categories.
+- **Limitations**:
+  - The application does not support multi-currency management.
+  - Some advanced security features for sensitive financial data may need to be added in future updates.
 
-### Limitations
 
-- **No Offline Mode:** The app requires an internet connection to function, as it relies on Firebase for data storage.
-- **Memory Usage:** The application may encounter memory limitations in a low-resource environment, particularly during deployment, as seen in Out of Memory (OOM) errors.
-
-## Troubleshooting
-
-- **Deployment Issues:** Ensure that all environment variables are correctly set in the Render dashboard, and large files like `node_modules` are excluded using `.gitignore`.
-
+This README should cover all essential details and give potential users and contributors a clear understanding of the project and its capabilities. Would you like to make any further adjustments?
