@@ -11,8 +11,6 @@ A web application designed to help users manage their personal finances by track
 - [Usage](#usage)
 - [Backend Setup](#backend-setup)
 - [Assumptions & Limitations](#assumptions--limitations)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Demo
 
@@ -55,9 +53,8 @@ Check out the live demo of the Personal Finance Tracker [here](https://personal-
 - **Frontend**: React.js, HTML, CSS, JavaScript
 - **Backend**: Node.js, Express.js (optional)
 - **Database**: Firebase Firestore
-- **Authentication**: Firebase Authentication
-- **State Management**: Redux (optional for complex state management)
-- **Hosting**: Firebase Hosting or Render
+- **Authentication**: Firebase Authentication for secure user account management
+- **Hosting**: Firebase Hosting for deploying the application
 
 ## Installation
 
@@ -119,6 +116,3 @@ Check out the live demo of the Personal Finance Tracker [here](https://personal-
 - **Limitations**:
   - The application does not support multi-currency management.
   - Some advanced security features for sensitive financial data may need to be added in future updates.
-
-
-This README should cover all essential details and give potential users and contributors a clear understanding of the project and its capabilities. Would you like to make any further adjustments?
